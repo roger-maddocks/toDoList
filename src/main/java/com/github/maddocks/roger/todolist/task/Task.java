@@ -1,18 +1,27 @@
-package com.diti.springboot;
-
-import java.util.ArrayList;
+package com.github.maddocks.roger.todolist.task;
 
 public class Task {
 
-    boolean complete = false;
-    int index = 0;
-    String thingToDo = "";
+    private String id;
+    private boolean complete;
+    private int index;
+    private String thingToDo;
 
-    Task () {
-        boolean complete = false;
-        int index = 0;
-        String thingToDo = "";
+    public Task() {}
 
+    public Task(String id, boolean complete, int index, String thingToDo) {
+        this.id = id;
+        this.complete = complete;
+        this.index = index;
+        this.thingToDo = thingToDo;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public boolean isComplete() {
@@ -38,7 +47,8 @@ public class Task {
     public void setThingToDo(String thingToDo) {
         this.thingToDo = thingToDo;
     }
-/////////////////////////////////////////////
+
+    /////////////////////////////////////////////
 
 /*
     public void markTaskComplete(Task toMark) {

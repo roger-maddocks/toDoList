@@ -1,4 +1,6 @@
-package com.diti.springboot;
+package com.github.maddocks.roger.todolist;
+
+import com.github.maddocks.roger.todolist.task.Task;
 
 import java.util.ArrayList;
 

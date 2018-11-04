@@ -1,4 +1,4 @@
-package com.diti.springboot;
+package com.github.maddocks.roger.todolist;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -3,12 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.diti</groupId>
-    <artifactId>springboot</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <!--<groupId>com.diti</groupId>-->
+    <groupId>com.github.roger-maddocks</groupId>
+    <artifactId>todolist</artifactId>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>springboot</name>
+    <name>To Do List</name>
     <description>Do It To It project for Spring Boot</description>
 
     <parent>

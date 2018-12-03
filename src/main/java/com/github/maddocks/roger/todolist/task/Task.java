@@ -50,7 +50,35 @@ public class Task {
 
     /////////////////////////////////////////////
 
+
 /*
+
+//JSON text copy and paste for Postman ease
+{
+	"id": "task1",
+	"complete": false,
+	"index": 0,
+	"thingToDo": "The first thing!"
+	}
+{
+    "id": "task1",
+    "complete": false,
+    "index": 1,
+    "thingToDo": "The first thing!"
+},
+{
+    "id": "task2",
+    "complete": false,
+    "index": 0,
+    "thingToDo": "The first thing!"
+},
+{
+    "id": "task3",
+    "complete": false,
+    "index": 2,
+    "thingToDo": "The first thing!"
+}
+
     public void markTaskComplete(Task toMark) {
         toMark.
     }

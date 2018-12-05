@@ -1,10 +1,7 @@
 package com.github.maddocks.roger.todolist.task;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.ResponseStatus;
-
-import javax.servlet.http.HttpServletResponse;
+import com.github.maddocks.roger.todolist.exception.DuplicateIdException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +17,9 @@ public class TaskService {
     private List<Task> tasks = new ArrayList<Task>();
 
     public Task create(Task task) {
-        if(findById(task.getId()) == null) {
+        if(findById(task.getId()) != null) {
+            throw new DuplicateIdException("Task with id \"" + task.getId() + "\" already exists.");
+        }else{
             tasks.add(task);
         }
         return task;

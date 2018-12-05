@@ -1,6 +1,6 @@
 package com.github.maddocks.roger.todolist.task;
 
-import com.sun.javafx.tools.packager.Log;
+import com.github.maddocks.roger.todolist.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,10 +10,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.servlet.http.HttpServletResponse;
 import java.util.List;
-import java.util.logging.Logger;
 
 @RestController // MVC View logic
 @RequestMapping("/v1/tasks")
@@ -40,6 +37,9 @@ public class TaskController {
 
     @GetMapping("/{id}")
     public Task findById(@PathVariable String id) {
+        if(taskService.findById(id) == null) {
+            throw new ResourceNotFoundException(id + " could not be found within the To Do List");
+        }
         return taskService.findById(id);
     }
 
